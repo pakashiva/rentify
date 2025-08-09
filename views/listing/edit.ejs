@@ -1,0 +1,59 @@
+<% layout("/layouts/boilerplate.ejs") %> 
+<body>
+    <h2 class="text-center">Edit this site </h2>
+
+    <form method="POST" action="/listings/<%= listingid._id %>?_method=PUT" class="w-75 mx-auto mt-5 needs-validation" novalidate>
+  <div class="mb-3">
+    <label class="form-label">Title</label>
+    <textarea name="listing[title]" class="form-control" rows="1" required><%= listingid.title %></textarea>
+    <div class="invalid-feedback">
+      please choose title.
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Description</label>
+    <textarea name="listing[description]" class="form-control" rows="2" required><%= listingid.description %></textarea>
+    <div class="invalid-feedback">
+      Description is needed.
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Image URL</label>
+    <textarea name="listing[image][url]" class="form-control" rows="1" required><%= listingid.image.url %></textarea>
+    <div class="invalid-feedback">
+      upload the image(url).
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Price</label>
+    <textarea name="listing[price]" class="form-control" rows="1" required><%= listingid.price %></textarea>
+    <div class="valid-feedback">
+      make sure your price is valid.
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Location</label>
+    <textarea name="listing[location]" class="form-control" rows="1" required><%= listingid.location %></textarea>
+    <div class="invalid-feedback">
+      locate your site.
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Country</label>
+    <textarea name="listing[country]" class="form-control" rows="1" required><%= listingid.country %></textarea>
+    <div class="invalid-feedback">
+      select your country.
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-custom">Submit</button>
+</form>
+
+
+    
+</body>

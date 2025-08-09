@@ -1,0 +1,86 @@
+<% layout("/layouts/boilerplate.ejs") %>
+
+<div class="container-fluid py-3 border-bottom bg-white filter-bar">
+  <div class="d-flex flex-wrap align-items-center justify-content-start gap-4">
+    <div class="text-center filter-item">
+      <div class="filter-icon mb-1">
+        <i class="fa-solid fa-umbrella-beach"></i>
+      </div>
+      <small>Beachfront</small>
+    </div>
+
+    <div class="text-center filter-item">
+      <div class="filter-icon mb-1">
+        <i class="fa-solid fa-person-swimming"></i>
+      </div>
+      <small>Amazing pools</small>
+    </div>
+
+    <div class="text-center filter-item">
+      <div class="filter-icon mb-1">
+        <i class="fa-solid fa-mountain-sun"></i>
+      </div>
+      <small>Mountains</small>
+    </div>
+
+    <div class="text-center filter-item">
+      <div class="filter-icon mb-1">
+        <i class="fa-solid fa-snowflake"></i>
+      </div>
+      <small>Arctic</small>
+    </div>
+
+    <div class="text-center filter-item">
+      <div class="filter-icon mb-1">
+        <i class="fa-solid fa-campground"></i>
+      </div>
+      <small>Camping</small>
+    </div>
+
+    <div class="text-center filter-item">
+      <div class="filter-icon mb-1">
+        <i class="fa-solid fa-cow"></i>
+      </div>
+      <small>Farms</small>
+    </div>
+
+    <div class="text-center filter-item">
+      <div class="filter-icon mb-1">
+        <i class="fa-solid fa-hotel"></i>
+      </div>
+      <small>Rooms</small>
+    </div>
+  </div>
+</div>
+
+<body>
+  <div class="header-section text-center mb-5">
+    <h4 class="fw-semibold text-primary-emphasis py-3 px-4 rounded-4 shadow-sm">
+      <i class="bi bi-send-fill me-2"></i>
+      Begin your journey, we are with you.
+    </h4>
+  </div>
+
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+      <% for(let list of alllists) { %>
+      <div class="col">
+        <div class="card h-100 listing-card shadow-sm">
+          <a href="/listings/<%=list._id%>" class="listing-link">
+            <img src="<%=list.image.url%>" class="card-img-top" alt="list_image" style="height: 14rem; object-fit: cover;">
+            <div class="card-img-overlay favorite-icon">
+              <i class="bi bi-heart-fill text-white"></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"><b><%=list.title%></b></h5>
+              <p class="card-text text-muted">
+                &#8377;<%= list.price.toLocaleString("en-IN") %>/night
+              </p>
+              <a href="/listings/<%=list._id%>" class="btn btn-primary btn-sm">Visit site</a>
+            </div>
+          </a>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </div>

@@ -1,0 +1,60 @@
+<% layout("/layouts/boilerplate.ejs") %> 
+<body>
+
+  <h3 class="mb-4 text-center">Add Your Site</h3>
+
+<form method="POST" action="/listings" class="w-75 mx-auto needs-validation" novalidate>
+
+  <div class="mb-3">
+    <label for="title" class="form-label">Title</label>
+    <textarea id="title" name="listing[title]" class="form-control" rows="1" required></textarea>
+    <div class="invalid-feedback">
+      please choose title.
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="description" class="form-label">Description</label>
+    <textarea id="description" name="listing[description]" class="form-control" rows="3" required></textarea>
+    <div class="invalid-feedback">
+      Description is needed.
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="image" class="form-label">Image (URL/link)</label>
+    <textarea id="image" name="listing[image][url]" class="form-control" rows="1" placeholder="https://..."></textarea>
+
+    <input type="hidden" name="listing[image][filename]" value="">
+  </div>
+
+  <div class="mb-3">
+    <label for="price" class="form-label">Price</label>
+    <textarea id="price" name="listing[price]" class="form-control" rows="1" required></textarea>
+    <div class="valid-feedback">
+      make sure your price is valid.
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="location" class="form-label">Location</label>
+    <textarea id="location" name="listing[location]" class="form-control" rows="1" required></textarea>
+    <div class="invalid-feedback">
+      locate your site.
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="country" class="form-label">Country</label>
+    <textarea id="country" name="listing[country]" class="form-control" rows="1" required></textarea>
+    <div class="invalid-feedback">
+      select your country.
+    </div> 
+
+  </div>
+
+  <button type="submit" class="btn btn-custom">Submit</button>
+</form>
+
+    
+</body>

@@ -1,0 +1,239 @@
+ /* Global Font */
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+    }
+
+    /* Navbar Styling (from your CSS) */
+    .navbar {
+      height: 5rem;
+      background-color: white;
+    }
+
+    .fa-compass {
+      color: #fe424d;
+      font-size: 3rem;
+    }
+
+    .nav-link {
+      color: black !important;
+    }
+
+    /* Footer Styling (from your CSS) */
+    .f-info {
+      text-align: center;
+      height: 8rem;
+      background-color: #ebebeb;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: space-evenly;
+    }
+
+    .f-info a {
+      text-decoration: none;
+      color: #222222;
+    }
+
+    .f-info a:hover {
+      text-decoration: underline;
+      color: #222222;
+    }
+
+    .f-info-links,
+    .f-info-socials,
+    .f-info-brand {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .f-info-socials {
+      font-size: 1.2rem;
+      margin-right: 1rem;
+    }
+
+    /* Filter Bar Styling */
+    .filter-bar {
+      position: sticky;
+      top: 80px; /* Matches your navbar height (5rem = 80px) */
+      z-index: 1000;
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .filter-item {
+      transition: transform 0.2s ease, color 0.2s ease;
+      cursor: pointer;
+    }
+
+    .filter-item:hover {
+      transform: translateY(-3px);
+      color: #fe424d; /* Matches your primary color */
+    }
+
+    .filter-icon {
+      width: 30px;
+      height: 30px;
+      background-color: #f1f1f1;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: #333;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .filter-item:hover .filter-icon {
+      background-color: #e7e7e7;
+      color: #fe424d;
+    }
+
+    .filter-item small {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #555;
+    }
+
+    /* Header Section */
+    .header-section {
+      background: linear-gradient(135deg, #fef1f1 0%, #fdd6d8 100%); /* Adjusted to complement #fe424d */
+      padding: 2rem 0;
+      margin-top: 1rem;
+      border-radius: 10px;
+    }
+
+    .header-section h4 {
+      background: transparent !important;
+      font-size: 1.8rem;
+      color: #222222 !important; /* Matches your color scheme */
+      display: inline-flex;
+      align-items: center;
+      box-shadow: none !important;
+    }
+
+    .header-section .bi-send-fill {
+      color: #fe424d; /* Matches your primary color */
+      font-size: 1.5rem;
+    }
+
+    /* Card Styling */
+    .card {
+      border: none !important;
+      margin-bottom: 2rem;
+    }
+
+    .listing-card {
+      border-radius: 1.2rem !important;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .listing-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    }
+
+    .card-img-top {
+      border-radius: 1.2rem !important;
+      width: 100% !important;
+      height: 14rem;
+      object-fit: cover !important;
+    }
+
+    .card-img-overlay {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .card-img-overlay:hover {
+      opacity: 0.2;
+      background-color: white;
+    }
+
+    .card-body {
+      padding: 1.25rem;
+    }
+
+    .card-title {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: #222222; /* Matches your color scheme */
+    }
+
+    .card-text {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+      font-weight: 600 !important;
+    }
+
+    .listing-link {
+      color: #222222;
+      text-decoration: none;
+    }
+
+    .btn-custom {
+      background-color: #fe424d !important;
+      color: white !important;
+      border: none;
+      border-radius: 25px !important;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      transition: background-color 0.1s ease;
+    }
+
+    .btn-custom:hover {
+      background-color: #d93a36 !important;
+    }   
+
+    .btn-custom i {
+        display: inline;
+        margin-right: 0.5rem;
+    }
+
+    .search-input{
+        padding: 0.5rem 3rem 0.5rem 3rem !important;
+        border-radius: 25px !important;
+        width: 100% !important;
+    }
+
+    .favorite-icon {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+      padding: 8px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .listing-card:hover .favorite-icon {
+      opacity: 0.2;
+    }
+
+    .favorite-icon .bi-heart-fill {
+      font-size: 1.2rem;
+      color: #fe424d; /* Matches your primary color */
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 576px) {
+      .filter-bar {
+        padding: 1rem 0;
+      }
+      .filter-item {
+        margin: 0.5rem;
+      }
+      .header-section h4 {
+        font-size: 1.5rem;
+      }
+      .f-info {
+        height: auto;
+        padding: 1rem 0;
+      }
+      .f-info-socials {
+        margin-right: 0;
+      }
+    }

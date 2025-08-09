@@ -1,0 +1,45 @@
+<% layout("/layouts/boilerplate.ejs") %> 
+
+
+<div class="row mt-3">
+    <h2 class="mb-4 text-center">signup on <i>Rentify</i></h2>
+    <div class="col-6 offset-3">
+        <form action="/signup" method="post" class="needs-validation" novalidate>
+             <div class="mb-3">
+            <label for="title" class="form-label">Username</label>
+            <input type="username" id="Username" name="username" class="form-control" rows="1" required></input>
+            <div class="invalid-feedback">
+             enter your Username.
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="title" class="form-label">Email</label>
+            <input type="email" id="Email" name="email" class="form-control" rows="1" required></input>
+            <div class="invalid-feedback">
+              enter your email.
+            </div>
+        </div>
+
+         <div class="mb-3">
+            <label for="title" class="form-label">Password</label>
+            <input type="password" id="Password" name="password" class="form-control" rows="1" required></input>
+            <div class="invalid-feedback">
+              enter your Password.
+            </div>
+        </div>
+
+        <button class="btn btn-custom">Signup</button>
+
+        </form>
+
+       
+    </div>
+
+</div>
+
+   <div class="col-6 offset-3 mt-5">
+     <p>Already have an account? <a href="/login">Login</p>
+   </div>
+
+  
